@@ -1,0 +1,15 @@
+.number-row{
+  padding: 0 35px;
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  .number-input-container{
+    margin-left: 15px;
+    max-width: 10%;
+    overflow: hidden;
+  }
+  .delete-row-btn{
+    margin-left: 15px;
+  }
+}
