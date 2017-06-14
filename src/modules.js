@@ -112,11 +112,9 @@ const ACTION_HANDLERS = {
     }
   },
   [ADD_ROW]: (state) => {
-    let newModalItems = [...state.modalItems];
-    newModalItems.push({...state.modalItems[0]});
     return{
       ...state,
-      modalItems: newModalItems
+      modalItems: [...state.modalItems, state.modalItems[state.modalItems.length - 1]]
     }
   }
 };
