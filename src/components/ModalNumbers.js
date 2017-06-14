@@ -35,6 +35,8 @@ class ModalNumbers extends React.Component {
         } else if (this.props.onSave) {
             this.props.onSave(this.props.modalReducer.modalItems);
             this.props.actions.openModal()
+        } else if (this.props.onClose) {
+            this.props.onClose();
         } else {
             this.props.actions.openModal()
         }

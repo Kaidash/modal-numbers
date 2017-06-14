@@ -1,6 +1,5 @@
 import { combineReducers } from 'redux';
 
-export const TEST = "TEST";
 export const INITIAL_OPEN_MODAL = "INITIAL_OPEN_MODAL";
 export const OPEN_MODAL = "OPEN_MODAL";
 export const SET_MODAL_SELECT_ITEM = "SET_MODAL_SELECT_ITEM";
@@ -8,8 +7,6 @@ export const INITIAL_SET_SELECT = "INITIAL_SET_SELECT";
 export const SET_MODAL_INPUT_ITEM = "SET_MODAL_INPUT_ITEM";
 export const REMOVE_ROW = "REMOVE_ROW";
 export const ADD_ROW = "ADD_ROW";
-
-
 
 
 export function initialOpenModal (value) {
@@ -121,7 +118,7 @@ const ACTION_HANDLERS = {
       ...state,
       modalItems: newModalItems
     }
-  },
+  }
 };
 
 
@@ -130,13 +127,12 @@ const initialState = {
   modalItems: [
     {
       selectActiveItem: 1,
-      selectItems:['Test','Test2','test3'],
+      selectItems:['Default'],
       number: 0
     }
   ]
 };
 export  function modalReducer (state = initialState, action) {
-  console.log('reducer');
   const handler = ACTION_HANDLERS[action.type];
 
   return handler ? handler(state, action) : state;
